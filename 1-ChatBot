@@ -1,0 +1,32 @@
+def chatbot():
+    print("Welcome to the Simple Chatbot!")
+    print("You can ask me the following questions:")
+    print("""
+    1. Hi!
+    2. How are you?
+    3. Are you working?
+    4. What is your name?
+    5. What did you do yesterday?
+    6. Quit.
+    """)
+
+    responses = {
+        "Hi!": "Hello! How can I help you today?",
+        "How are you?": "I'm just a program, but I'm functioning perfectly. How about you?",
+        "Are you working?": "Yes, I'm here to chat with you!",
+        "What is your name?": "I'm SimpleBot, your friendly chatbot.",
+        "What did you do yesterday?": "I spent my time waiting for you to chat with me!",
+    }
+
+    while True:
+        user_input = input("You: ")
+        if user_input == "Quit":
+            print("Chatbot: Goodbye! Have a nice day!")
+            break
+        elif user_input in responses:
+            print(f"Chatbot: {responses[user_input]}")
+        else:
+            print("Chatbot: I'm sorry, I don't understand that. Please ask one of the listed questions.")
+
+# Run the chatbot
+chatbot()
